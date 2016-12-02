@@ -17,7 +17,13 @@ Besides the demo's, useful links can also be found here.
 
 ### PhoneGap
 
+[PhoneGap](http://phonegap.com/)
 
+[Quickstart-map-phonegap](https://github.com/esri/quickstart-map-phonegap/)
+
+### Other usefull resources
+
+[Building Mobile Apps Using ArcGIS API for JavaScript](https://github.com/lheberlie/mobile-webapps-js/blob/develop/Resources.md/)
 
 ## ArcGIS API for JavaScript: Tips and Tricks for Developing and Debugging Apps
 
@@ -47,7 +53,7 @@ Besides the demo's, useful links can also be found here.
 
 [Web Optimizer](https://developers.arcgis.com/javascript/3/jshelp/inside_web_optimizer.html/)
 
-[Bower](https://developers.arcgis.com/javascript/3/jshelp/inside_bower_custom_builds.html/)
+[Bower custom builds](https://developers.arcgis.com/javascript/3/jshelp/inside_bower_custom_builds.html/)
 
 
 
