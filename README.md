@@ -51,9 +51,9 @@ Besides the demo's, useful links can also be found here.
 
 ### Optimizer
 
-[Web Optimizer](https://developers.arcgis.com/javascript/3/jshelp/inside_web_optimizer.html/)
+[Web Optimizer](https://developers.arcgis.com/javascript/3/jshelp/inside_web_optimizer.html)
 
-[Bower custom builds](https://developers.arcgis.com/javascript/3/jshelp/inside_bower_custom_builds.html/)
+[Bower custom builds](https://developers.arcgis.com/javascript/3/jshelp/inside_bower_custom_builds.html)
 
 
 
