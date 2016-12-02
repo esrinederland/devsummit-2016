@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "amd",
+        "sourceMap": true,
+        "noImplicitUseStrict": true,
+        "watch": true
+    },
+    "files": [
+        "./src/main.ts",
+        "./typings.d.ts"
+    ]
+}

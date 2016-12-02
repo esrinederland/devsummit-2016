@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Dev Summit Berlin 2016 - Building Mobile Web Apps</title>
+    <meta name="description" content="Dev Summit Berlin 2016 - Building Mobile Web Apps">
+    <link rel="icon" href="http://www.esri.com/favicon.ico">
+    <!-- 1. Add the BootStrap, Calcite and ArcGIS CSS -->
+    <!-- Calcite Bootstrap -->
+    <link rel="stylesheet" href="http://esri.github.com/calcite-maps/dist/css/calcite-bootstrap.min-v0.2.css">
+    <!-- Calcite Maps -->
+    <link rel="stylesheet" href="http://esri.github.com/calcite-maps/dist/css/calcite-maps-arcgis-4.x.min-v0.2.css">
+    <!-- ArcGIS JS 4.1 -->
+    <link rel="stylesheet" href="https://js.arcgis.com/4.1/esri/css/main.css">
+    <!-- End step 1 -->
+    <!-- 2. Add CSS so that the map will take full height -->
+    <style>
+        html,
+        body,
+        #main {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        /*optional*/
+        
+        .container-fluid {
+            height: 90%;
+        }
+        
+        div#main>div {
+            height: 100%;
+            overflow-y: auto;
+        }
+        
+        .footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 10%;
+        }
+        
+        .footer div {
+            height: 100%;
+        }
+        
+        .padding {
+            padding: 10px;
+        }
+
+        .no-padding {
+            padding: 0;
+        }
+
+        /* this media query will make the footer disappear once the width of the window is > 768 pixels */
+        @media (min-width: 768px) {
+            .container-fluid {
+                height: 100%;
+                margin-bottom: 0;
+            }
+
+            #firstPart {
+                background-image: url(images/phone.png);
+                background-position: center bottom;
+                background-repeat: no-repeat;
+                background-size:100%;
+            }
+
+            .footer {
+                height: 0;
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<!-- 3. Add the HTML -->
+<body class="calcite-maps">
+    <!-- 3 columns of content -->
+    <div class="container-fluid no-padding">
+        <div id="main" class="row">
+            <div id="firstPart" class="col-sm-3 no-padding">
+                <div class="page-header padding">
+                    <h3>Dev Summit Berlin 2016</h3>
+                </div>
+                <div class="padding">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque dui nec nisl placerat commodo.
+                        Quisque sit amet enim sapien. Phasellus et ligula ipsum. Vestibulum volutpat sollicitudin ornare.
+                        Nunc pretium faucibus vehicula. In hac habitasse platea dictumst. Nulla fringilla dui porttitor ex
+                        pharetra, a maximus enim volutpat. Sed dapibus sapien eu eros lobortis gravida. Maecenas dignissim
+                        porttitor lacus, ut faucibus odio congue vitae.</p>
+                </div>
+            </div>
+            <div id="secondPart" class="col-sm-6 no-padding calcite-maps calcite-nav-top">
+                <!-- Map container -->
+                <div class="calcite-map calcite-map-absolute calcite-widgets-dark">
+                    <div id="mapViewDiv"></div>
+                </div>
+            </div>
+            <div id="thirdPart" class="col-sm-3 no-padding">
+                <div class="page-header padding">
+                    <h3>Demo App</h3>
+                </div>
+                <div class="padding">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque dui nec nisl placerat commodo.
+                        Quisque sit amet enim sapien. Phasellus et ligula ipsum. Vestibulum volutpat sollicitudin ornare.
+                        Nunc pretium faucibus vehicula. In hac habitasse platea dictumst. Nulla fringilla dui porttitor ex
+                        pharetra, a maximus enim volutpat. Sed dapibus sapien eu eros lobortis gravida. Maecenas dignissim
+                        porttitor lacus, ut faucibus odio congue vitae.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer id="footer" class="footer">
+        <div class="col-xs-4 no-padding">
+            <div id="btnA" class="btn btn-default btn-block calcite-btn-noborder">Home</div>
+        </div>
+        <div class="col-xs-4 no-padding calcite-btn-noborder">
+            <div id="btnB" class="btn btn-default btn-block calcite-btn-noborder">Map</div>
+        </div>
+        <div class="col-xs-4 no-padding calcite-btn-noborder">
+            <div id="btnC" class="btn btn-default btn-block calcite-btn-noborder">Demo</div>
+        </div>
+    </footer>
+
+    <!-- 4. Add a dojo config file with references to Bootstrap and Calcite -->
+    <!-- dojo config -->
+    <script>
+        var dojoConfig = {
+            packages: [{
+                name: "bootstrap",
+                location: "http://esri.github.com/calcite-maps/dist/vendor/dojo-bootstrap"
+            }, {
+                name: "calcite-maps",
+                location: "http://esri.github.com/calcite-maps/dist/js/dojo"
+            }, {
+                name: "App",
+                location: location.pathname.replace(/\/[^/]+$/, "/") + "src"
+            }]
+        };
+    </script>
+
+    <!-- 5. Add the ArcGIS JS API -->
+    <!-- ArcGIS JS 4.1 -->
+    <script src="https://js.arcgis.com/4.1/"></script>
+    
+    <!-- 6. Load the libraries and add your own code -->
+    <script>
+        require([
+        "App",
+        // Bootstrap
+        "bootstrap/Collapse",
+        // Calcite-maps
+        "calcite-maps/calcitemaps-v0.2",
+
+        "dojo/domReady!"
+        ], function(App){
+            var myApp = new App();
+            myApp.load();
+        });
+    </script>
+</body>
+
+</html>

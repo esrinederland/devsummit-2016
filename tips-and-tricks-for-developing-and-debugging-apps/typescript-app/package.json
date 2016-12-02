@@ -1,0 +1,16 @@
+{
+  "name": "typescript-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/arcgis-js-api": "^3.18.33",
+    "dojo-typings": "^1.11.5"
+  }
+}

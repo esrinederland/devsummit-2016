@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Dev Summit Berlin 2016 - Using your location</title>
+    <meta name="description" content="Dev Summit Berlin 2016 - Using your location">
+    <link rel="icon" href="https://www.esri.com/favicon.ico">
+    <!-- ArcGIS JS 4.1 -->
+    <link rel="stylesheet" href="https://js.arcgis.com/4.1/esri/css/main.css">
+    <style>
+        html,
+        body,
+        #viewDiv {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="viewDiv"></div>
+    <!-- Dojo Config -->
+    <script type="text/javascript">
+        var dojoConfig = {
+        packages: [
+        {
+            name: "app",
+            location: location.pathname.replace(/\/[^/]+$/, "/") + "src"
+        }]
+        };
+    </script>
+    <!-- JS ArcGIS 4.1 -->
+    <script src="https://js.arcgis.com/4.1/"></script>
+    <script>
+        require([
+        "app",
+
+        "dojo/domReady!"
+        ], function(app){
+            var myApp = new app();
+            myApp.load();
+        });
+    </script>
+</body>
+
+</html>

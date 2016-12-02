@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Dev Summit Berlin 2016</title>
+  <link rel="icon" href="http://www.esri.com/favicon.ico">
+  <link rel="stylesheet" href="https://js.arcgis.com/3.18/esri/css/esri.css">
+  <script>
+    window.dojoConfig = {
+      deps: ["app/main"],
+      packages: [
+        {
+          name: "app",
+          location: location.pathname.replace(/\/[^/]+$/, "/") + "src"
+        }
+      ]
+    };
+  </script>
+  <script src="https://js.arcgis.com/3.18/"></script>
+  <style>
+    html, body, #map {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="map">
+  </div>
+</body>
+
+</html>

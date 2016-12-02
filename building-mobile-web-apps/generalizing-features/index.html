@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Dev Summit Berlin 2016</title>
+    <meta name="description" content="Dev Summit Berlin 2016 - Generalizing Features Sample">
+    <link rel="icon" href="http://www.esri.com/favicon.ico">
+    <!-- Calcite Bootstrap -->
+    <link rel="stylesheet" href="http://esri.github.com/calcite-maps/dist/css/calcite-bootstrap.min-v0.2.css">
+    <!-- Calcite Maps -->
+    <link rel="stylesheet" href="http://esri.github.com/calcite-maps/dist/css/calcite-maps-arcgis-4.x.min-v0.2.css">
+    <!-- ArcGIS JS 4.1 -->
+    <link rel="stylesheet" href="https://js.arcgis.com/4.1/esri/css/main.css">
+    <style>
+        html,
+        body,
+        #viewDiv {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+        
+        .button-placeholder {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+			
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calcite-map">
+        <div id="viewDiv"></div>
+    </div>
+    <div class="button-placeholder calcite-panels calcite-text-light calcite-bg-dark">
+        <div class="panel-heading">
+            <p class="text-center">
+                Generalize features
+            </p>
+        </div>
+        <div class="panel-body">
+            <div class="btn btn-default btn-block" id="btnQueryFeaturesWithoutOffset">Query Features Without Offset</div>
+            <div class="btn btn-default btn-block" id="btnQueryFeaturesWithLargeOffset">Query Features With Offset (1000)</div>
+            <div class="btn btn-default btn-block" id="btnQueryFeaturesWithOffset">Query Features With Offset (100)</div>
+        </div>
+    </div>
+    <!-- Dojo Config -->
+    <script type="text/javascript">
+        var dojoConfig = {
+        packages: [{
+            name: "bootstrap",
+            location: "http://esri.github.com/calcite-maps/dist/vendor/dojo-bootstrap"
+        },
+        {
+            name: "calcite-maps",
+            location: "http://esri.github.com/calcite-maps/dist/js/dojo"
+        },
+        {
+            name: "app",
+            location: location.pathname.replace(/\/[^/]+$/, "/") + "src"
+        }]
+        };
+    </script>
+    <!-- Dojo Config -->
+    <script src="https://js.arcgis.com/4.1/"></script>
+    <script>
+        require([
+        "app",
+        // Bootstrap
+        "bootstrap/Collapse",
+
+        // Calcite-maps
+        "calcite-maps/calcitemaps-v0.2",
+
+        "dojo/domReady!"
+        ], function(app){
+            var myApp = new app();
+            myApp.load();
+        });
+    </script>
+</body>
+
+</html>
