@@ -5,19 +5,27 @@ Besides the demo's, useful links can also be found here.
 
 ## ArcGIS API for JavaScript: Building Mobile Web Apps
 
+[Choose between 3.x and 4.x](https://developers.arcgis.com/javascript/latest/guide/choose-version/index.html)
+
 ### Mobile in ArcGIS API for JavaScript 3.x
 
 [Mobile samples](https://developers.arcgis.com/javascript/3/jssamples/#mobile)
 
+[Bootstrap Map](https://github.com/Esri/bootstrap-map-js)
+
 ### Creating Responsive Web Apps
 
 [Calcite Maps](https://github.com/Esri/calcite-maps)
+
+[Calcite Maps Styler](http://esri.github.io/calcite-maps/samples/styler/styler.html)
 
 [Bootstrap](http://getbootstrap.com/)
 
 ### PhoneGap
 
 [PhoneGap](http://phonegap.com/)
+
+[PhoneGap Build Service](https://build.phonegap.com/)
 
 [Quickstart-map-phonegap](https://github.com/esri/quickstart-map-phonegap/)
 
