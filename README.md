@@ -5,6 +5,8 @@ Besides the demo's, useful links can also be found here.
 
 ## ArcGIS API for JavaScript: Building Mobile Web Apps
 
+[Slides from the session](http://slides.com/fhissink/building-mobile-web-apps)
+
 [Choose between 3.x and 4.x](https://developers.arcgis.com/javascript/latest/guide/choose-version/index.html)
 
 ### Mobile in ArcGIS API for JavaScript 3.x
